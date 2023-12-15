@@ -4,28 +4,36 @@
     <div class="row ">
         <div class="col-8 offset-2 ">
             <h3>Edit your Listing</h3>
-            <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
+            <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input name="listing[title]"
                         value="<%=listing.title%>"
                         class="form-control" 
-                        type="text">
+                        type="text"
+                        required>
+                    <div class="valid-feedback">Title looks good!</div>
                 </div>
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea name="listing[description]" 
                         class="form-control" 
+                        required
                     ><%=listing.description%></textarea>
+            <div class="invalid-feedback">Enter short description</div>
+
                 </div>
 
                 <div class="mb-3">
                     <label for="image" class="form-label">Image Link</label>
                     <input name="listing[image]"
-                        value="<%=listing.image.url%>"
+                        value="<%=listing.image%>"
                         class="form-control"
-                        type="text">
+                        type="text"
+                        required>
+                    <div class="invalid-feedback">Add a valid URL/link</div>
+
                 </div>
 
                 <div class="row">
@@ -34,7 +42,9 @@
                         <input name="listing[price]" 
                             value="<%=listing.price%>"
                             class="form-control"  
-                            type="number">
+                            required>
+                    <div class="invalid-feedback">Add a valid Price</div>
+
                     </div>
             
                     <div class="mb-3 col-md-8 ">
@@ -43,7 +53,10 @@
                         <input name="listing[country]"
                             value="<%=listing.country%>"
                             class="form-control" 
-                            type="text">
+                            type="text"
+                            required>
+                    <div class="invalid-feedback">Enter valid country name</div>
+
                     </div>
 
                 </div>
@@ -53,7 +66,10 @@
                     <input name="listing[location]"
                         value="<%=listing.location%>"
                         class="form-control" 
-                        type="text">
+                        type="text"
+                        required>
+                <div class="invalid-feedback">Enter valid Location</div>
+
                 </div>
 
 
@@ -61,6 +77,7 @@
             </form>
         </div>
     </div>
+    <script src="/js/script.js"></script>
 
 
 
