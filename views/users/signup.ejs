@@ -1,0 +1,47 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+   
+    <div class="row ">
+        <h1 class="col-6 offset-3 mt-2">Sign-up for TravelCrafter</h1>
+        <div class="col-6 offset-3 ">
+            <form action="/signup" method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="username"
+                        id="username"
+                        class="form-control" 
+                        type="text"
+                        required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Enter your username</div>
+
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email"
+                        id="email"
+                        class="form-control" 
+                        type="email"
+                        required>
+                        <div class="invalid-feedback">Enter your email</div>
+
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password"
+                        id="password"
+                        class="form-control" 
+                        type="password"
+                        required>
+                        <div class="invalid-feedback">Enter your password</div>
+
+                </div>
+
+                <button class="btn btn-success">SignUp</button>
+            </form>
+        </div>
+    </div>
