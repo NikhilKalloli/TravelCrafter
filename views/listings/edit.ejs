@@ -4,7 +4,8 @@
     <div class="row ">
         <div class="col-8 offset-2 ">
             <h3>Edit your Listing</h3>
-            <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation">
+            <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation"
+                 enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input name="listing[title]"
@@ -21,19 +22,21 @@
                         class="form-control" 
                         required
                     ><%=listing.description%></textarea>
-            <div class="invalid-feedback">Enter short description</div>
+                    <div class="invalid-feedback">Enter short description</div>
 
                 </div>
 
                 <div class="mb-3">
-                    <label for="image" class="form-label">Image Link</label>
-                    <input name="listing[image]"
-                        value="<%=listing.image%>"
-                        class="form-control"
-                        type="text"
-                        required>
-                    <div class="invalid-feedback">Add a valid URL/link</div>
+                    Original Listing image: <br>
+                   <img src="<%=originalImageUrl%>"/>
+                </div>
 
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload New Image </label>
+                    <input name="listing[image]"
+                        class="form-control"
+                        type="file"
+                        >
                 </div>
 
                 <div class="row">
@@ -43,7 +46,7 @@
                             value="<%=listing.price%>"
                             class="form-control"  
                             required>
-                    <div class="invalid-feedback">Add a valid Price</div>
+                            <div class="invalid-feedback">Add a valid Price</div>
 
                     </div>
             
@@ -55,7 +58,7 @@
                             class="form-control" 
                             type="text"
                             required>
-                    <div class="invalid-feedback">Enter valid country name</div>
+                            <div class="invalid-feedback">Enter valid country name</div>
 
                     </div>
 
