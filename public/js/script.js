@@ -1,3 +1,4 @@
+// It is used to validate the forms in the application
 (() => {
     'use strict'
   

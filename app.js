@@ -14,6 +14,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js"); 
 const session = require("express-session");
 const flash = require("connect-flash");
+
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
@@ -45,20 +46,28 @@ async function main(){
     await mongoose.connect(MONGO_URL);
 }
 
+// Cookie is used to store some data on browser so that other pages can access it
+
 const sessionOptions = {
-    secret:"mysecret",
+    secret:"mysecret", // This is used to access the cookie
     resave: false,
     saveUninitialized: true,
     cookie:{
-        expires:Date.now() + 7 * 24 * 60 * 60 *1000,  // cookie deletes after a week
+        expires:Date.now() + 7 * 24 * 60 * 60 *1000,  // cookie gets deleted after a week. So after a week user has to login again
         maxAge:  7 * 24 * 60 * 60 *1000,
         httpOnly:true,
     }
 };
 
+
 // app.get("/", (req,res)=>{
 //     res.send("Home page");
 // })
+
+// http is a stateless protocol, so we use session to store data on server side
+// Session is used to store temporary data on server side so that it can be accessed by other pages
+// Session is stored in a cookie on browser side
+// Session generates a unique id for each user and this is accessed on browser by a signed cookie
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -91,6 +100,10 @@ app.use((req, res, next)=>{
 //     let registeredUser = await User.register(fakeUser,"Helloworld");
 //     res.send(registeredUser);
 // })
+
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
 
 app.use("/listings", listingRouter)
 app.use("/listings/:id/reviews", reviewRouter);

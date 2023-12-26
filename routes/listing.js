@@ -6,8 +6,8 @@ const Listing = require("../models/listing.js");
 const {isLoggedIn, isOwner, validateListing} = require("../middleware.js");
 const { Cursor } = require("mongoose");
 
-const multer  = require('multer')
-const {storage} = require("../cloudConfig.js");
+const multer  = require('multer') // multer is used to upload files
+const {storage} = require("../cloudConfig.js");// Files will be uploaded to storage in cloudinary.
 const upload = multer({ storage }) ; // now multer uploads our files in cloudinary storage
 
 
