@@ -73,7 +73,8 @@ module.exports.renderEditForm = (async (req,res)=>{
         res.redirect("/listings");
     }
     let originalImageUrl = listing.image.url; // We are croping image using cloudinary api
-    originalImageUrl = originalImageUrl.replace("/upload","/upload/w_250");
+    originalImageUrl = originalImageUrl.replace("/upload","/upload/h_250,w_250");
+    console.log(originalImageUrl);
     res.render("listings/edit.ejs",{listing, originalImageUrl});
 
 });
