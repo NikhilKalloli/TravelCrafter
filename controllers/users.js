@@ -32,8 +32,7 @@ module.exports.renderLoginForm = (req,res)=>{
 
 module.exports.login =  async(req,res)=>{
     req.flash("success","Welcome back to TravelCrafter!");
-    res.redirect("/listings");
-
+    res.redirect(res.locals.redirectUrl || "/listings");
 };
 
 module.exports.logout = (req,res, next)=>{

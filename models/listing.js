@@ -37,13 +37,14 @@ const listingSchema = new Schema({
             required: true
           }
     },
+    // category:{
+        //     type:String,
+        //     enum:["mountains", "artic","farms"]
+        // }
 
     
 })
-// category:{
-//     type:String,
-//     enum:["mountains", "artic","farms"]
-// }
+
 
 
 // The below code is for deleting reviews when a listing is deleted
