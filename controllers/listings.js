@@ -33,6 +33,31 @@ module.exports.showListing = (async (req,res)=>{
     res.render("listings/show.ejs",{ listing })
 });
 
+
+module.exports.showCategory = (async (req,res)=>{
+
+
+    const selectedCategory = req.body.selectedCategory;
+    // console.log('Selected Category:', selectedCategory);
+    
+    // if(selectedCategory=="Trending"){
+    //     const allListings = await Listing.find({});
+    //     req.flash("success","Trending Listings!");
+    //     res.render("listings/index.ejs",{ allListings });
+    // }
+
+    const allListings = await Listing.find({category:selectedCategory})
+    // console.log(allListings);
+
+    if(allListings.length==0){
+        req.flash("error","The category you reqested does not exist!");
+        res.redirect("/listings");
+    }
+    res.render("listings/showCategory.ejs",{ allListings, selectedCategory })
+});
+
+
+
 module.exports.createListing = (async (req,res,next)=>{
     
     // Before saving listing we need to get the coordinates of the location.
@@ -74,7 +99,7 @@ module.exports.renderEditForm = (async (req,res)=>{
     }
     let originalImageUrl = listing.image.url; // We are croping image using cloudinary api
     originalImageUrl = originalImageUrl.replace("/upload","/upload/h_250,w_250");
-    console.log(originalImageUrl);
+    // console.log(originalImageUrl);
     res.render("listings/edit.ejs",{listing, originalImageUrl});
 
 });

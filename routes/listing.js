@@ -13,7 +13,7 @@ const upload = multer({ storage }) ; // now multer uploads our files in cloudina
 
 const ListingController = require("../controllers/listings.js");
 
-
+// listings routes
 router
     .route("/")
     .get(wrapAsync(ListingController.index)) //Index route
@@ -24,7 +24,11 @@ router
 //New Route
 router.get("/new",isLoggedIn,ListingController.renderNewForm);
 
+// Category Route
+router.post("/category", wrapAsync(ListingController.showCategory));
 
+
+// listings/:id routes
 router
     .route("/:id")
     .get(wrapAsync(ListingController.showListing))  //Show route

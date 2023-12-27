@@ -10,7 +10,7 @@ let sampleListings = [
     location: 'Malibu',
     country: 'United States',
     geometry: { type: 'Point', coordinates: [ -118.689423, 34.035591 ] },
-    category: 'Amazing_pools'
+    category: 'Boats'
   },
   {
     title: 'Mindboggling Madagascar',
@@ -22,8 +22,8 @@ let sampleListings = [
     price: 1200,
     location: 'Madagascar',
     country: ' East Africa',
-    geometry: { type: 'Point', coordinates: [  46.8691, 18.7669 ] },
-    category:"Beaches",
+    geometry: { type: 'Point', coordinates: [ 46.7059842741429, -19.3735339420708 ] },
+    category:"Boats",
   },
   {
     title: 'Mountain Retreat',
@@ -62,7 +62,7 @@ let sampleListings = [
     location: 'Portland',
     country: 'United States',
     geometry: { type: 'Point', coordinates: [ -122.674195, 45.520247 ] },
-    category:"Camping",
+    category:"Amazing pools",
   },
   {
     title: 'Beachfront Paradise',
@@ -75,7 +75,7 @@ let sampleListings = [
     location: 'Cancun',
     country: 'Mexico',
     geometry: { type: 'Point', coordinates: [ -86.851047, 21.161785 ] },
-    category:"Beaches",
+    category:"Trending",
   },
   {
     title: 'Rustic Cabin by the Lake',
@@ -91,20 +91,20 @@ let sampleListings = [
       type: 'Point',
       coordinates: [ -119.97169299999999, 38.926272999999995 ]
     },
-    category:"Boats",
+    category:"Camping",
   },
   {
-    title: 'Luxury Penthouse with City Views',
-    description: 'Indulge in luxury living with panoramic city views from this stunning penthouse apartment.',
+    title: 'Luxury with Oceanfront Views',
+    description: 'Experience the epitome of luxury living with breathtaking oceanfront views from this exquisite penthouse in the Hawaiian Islands.',
     image: {
       filename: 'listingimage',
       url: 'https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60'
     },
-    price: 3500,
-    location: 'Los Angeles',
+    price: 5000,
+    location: 'Maui',
     country: 'United States',
-    geometry: { type: 'Point', coordinates: [ -118.242766, 34.053691 ] },
-    category:"Iconic_cities",
+    geometry: { type: 'Point', coordinates: [ -156.453056, 20.798363 ] },
+    category: 'Beaches',
   },
   {
     title: 'Ski-In/Ski-Out Chalet',
@@ -117,7 +117,7 @@ let sampleListings = [
     location: 'Verbier',
     country: 'Switzerland',
     geometry: { type: 'Point', coordinates: [ 7.228548, 46.096795 ] },
-    category:"Artic",
+    category:"Boats",
   },
   {
     title: 'Safari Lodge in the Serengeti',
@@ -130,10 +130,10 @@ let sampleListings = [
     location: 'Serengeti National Park',
     country: 'Tanzania',
     geometry: { type: 'Point', coordinates: [ 30.536625, 38.820522 ] },
-    category:"Camping",
+    category:"Arctic",
   },
   {
-    title: 'Historic Canal House',
+    title: 'Ultimate Camping House',
     description: "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
     image: {
       filename: 'listingimage',
@@ -143,7 +143,7 @@ let sampleListings = [
     location: 'Amsterdam',
     country: 'Netherlands',
     geometry: { type: 'Point', coordinates: [ 4.9, 52.378 ] },
-    category:"Iconic_cities",
+    category:"Camping",
   },
   {
     title: 'Private Island Retreat',
@@ -152,14 +152,14 @@ let sampleListings = [
       filename: 'listingimage',
       url: 'https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60'
     },
-    price: 10000,
+    price: 1800,
     location: 'Fiji',
     country: 'Fiji',
     geometry: { type: 'Point', coordinates: [ 178.4406, -18.1456 ] },
-    category:"Beaches",
+    category:"Castles",
   },
   {
-    title: 'Charming Cottage in the Cotswolds',
+    title: 'Charming Beach in the Cotswolds',
     description: 'Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.',
     image: {
       filename: 'listingimage',
@@ -169,7 +169,7 @@ let sampleListings = [
     location: 'Cotswolds',
     country: 'United Kingdom',
     geometry: { type: 'Point', coordinates: [ 130.708022, 32.800881 ] },
-    category:"Farms",
+    category:"Rooms",
   },
   {
     title: 'Historic Brownstone in Boston',
@@ -185,7 +185,7 @@ let sampleListings = [
     category:"Castles",
   },
   {
-    title: 'Beachfront Bungalow in Bali',
+    title: 'Trekking in Bali',
     description: 'Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.',
     image: {
       filename: 'listingimage',
@@ -195,7 +195,7 @@ let sampleListings = [
     location: 'Bali',
     country: 'Indonesia',
     geometry: { type: 'Point', coordinates: [ 115.2191175, -8.6524973 ] },
-    category:"Boats",
+    category:"Camping",
   },
   {
     title: 'Mountain View Cabin in Banff',
@@ -221,7 +221,7 @@ let sampleListings = [
     location: 'Miami',
     country: 'United States',
     geometry: { type: 'Point', coordinates: [ -80.19362, 25.774173 ] },
-    category:"Rooms",
+    category:"Arctic",
   },
   {
     title: 'Tropical Villa in Phuket',
@@ -247,7 +247,7 @@ let sampleListings = [
     location: 'Scottish Highlands',
     country: 'United Kingdom',
     geometry: { type: 'Point', coordinates: [ -86.584995, 36.323662 ] },
-    category:"Castles",
+    category:"Rooms",
   },
   {
     title: 'Desert Oasis in Dubai',
@@ -260,7 +260,7 @@ let sampleListings = [
     location: 'Dubai',
     country: 'United Arab Emirates',
     geometry: { type: 'Point', coordinates: [ 55.292491, 25.265347 ] },
-    category:"Iconic_cities",
+    category:"Iconic cities",
   },
   {
     title: 'Rustic Log Cabin in Montana',
@@ -280,7 +280,7 @@ let sampleListings = [
   },
 
   {
-    title: 'Beachfront Villa in Greece',
+    title: 'Luxary Villa in Greece',
     description: 'Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.',
     image: {
       filename: 'listingimage',
@@ -290,7 +290,7 @@ let sampleListings = [
     location: 'Mykonos',
     country: 'Greece',
     geometry: { type: 'Point', coordinates: [ 25.347102999999997, 37.434446 ] },
-    category:"Beaches",
+    category:"Amazing pools",
   },
   {
     title: 'Eco-Friendly Treehouse Retreat',
@@ -319,7 +319,7 @@ let sampleListings = [
     location: 'Charleston',
     country: 'United States',
     geometry: { type: 'Point', coordinates: [ -79.940273, 32.787601 ] },
-    category:"Castles",
+    category:"Arctic",
   },
   {
     title: 'Modern Apartment in Tokyo',
@@ -332,7 +332,7 @@ let sampleListings = [
     location: 'Tokyo',
     country: 'Japan',
     geometry: { type: 'Point', coordinates: [ 139.1485991, 35.76478424 ] },
-    category:"Iconic_cities",
+    category:"Iconic cities",
   },
   {
     title: 'Lakefront Cabin in New Hampshire',
@@ -348,7 +348,7 @@ let sampleListings = [
       type: 'Point',
       coordinates: [ -71.5783054333969, 43.6898878153712 ]
     },
-    category:"Boats",
+    category:"Farms",
   },
   {
     title: 'Luxury Villa in the Maldives',
@@ -361,7 +361,7 @@ let sampleListings = [
     location: 'Maldives',
     country: 'Maldives',
     geometry: { type: 'Point', coordinates: [ 73.51104943, 4.17887365 ] },
-    category:"Amazing_pools",
+    category:"Amazing pools",
   },
   {
     title: 'Ski Chalet in Aspen',
@@ -374,7 +374,7 @@ let sampleListings = [
     location: 'Aspen',
     country: 'United States',
     geometry: { type: 'Point', coordinates: [ -106.823561, 39.191113 ] },
-    category:"Artic",
+    category:"Trending",
   },
 
   {
