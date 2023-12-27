@@ -43,6 +43,10 @@ body {
     justify-content: center;
 }
 
+.f-info-links{
+    gap: 1rem;
+}
+
 .f-info-socials i {
     font-size: 1.2rem;
     margin-right: 1rem;

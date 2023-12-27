@@ -56,6 +56,25 @@ module.exports.showCategory = (async (req,res)=>{
     res.render("listings/showCategory.ejs",{ allListings, selectedCategory })
 });
 
+module.exports.showSearch = (async (req,res)=>{
+
+    const searchedCountry = req.query.searchedCountry;
+    // console.log(searchedCountry);
+
+    const regexPattern = new RegExp(searchedCountry, 'i');
+
+    // Find listings matching the regex pattern for the country
+    const allListings = await Listing.find({ country: { $regex: regexPattern } });
+    // console.log(allListings);
+
+
+    if(allListings.length==0){
+        req.flash("error","No listings found for the specified country.");
+        res.redirect("/listings");
+    }
+    res.render("listings/searchCountry.ejs",{ allListings, searchedCountry })
+}); 
+
 
 
 module.exports.createListing = (async (req,res,next)=>{
@@ -68,7 +87,6 @@ module.exports.createListing = (async (req,res,next)=>{
       .send()
     
     // console.log(response.body.features[0].geometry);
-    // res.send("Done!");
        
     let url = req.file.path;
     let filename = req.file.filename;

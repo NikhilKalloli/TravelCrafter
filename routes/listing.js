@@ -27,6 +27,9 @@ router.get("/new",isLoggedIn,ListingController.renderNewForm);
 // Category Route
 router.post("/category", wrapAsync(ListingController.showCategory));
 
+// Search  Route
+router.get("/search", wrapAsync(ListingController.showSearch));
+
 
 // listings/:id routes
 router
