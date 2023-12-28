@@ -33,7 +33,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 
 - **Frontend**
   - HTML, CSS, JavaScript
-  - [Mapbox](https://www.mapbox.com/) for map integration
+  - Mapbox for map integration
 
 - **Backend**
   - Node.js with Express.js framework
@@ -63,8 +63,8 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 │ ├── review.js  
 │ └── user.js  
 └── utils  
-├── ExpressError.js  
-└── wrapAsync.js  
+│  ├── ExpressError.js  
+│  └── wrapAsync.js  
 ├── views    
 │ ├── errors  
 │ │ └── error.ejs  
@@ -79,12 +79,11 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 │ │ ├── index.ejs  
 │ │ ├── new.ejs  
 │ │ ├── searchCountry.ejs  
-│ │ └── show.ejs  
+│ │ ├── show.ejs  
+│ │ └── showCategory.ejs
 │ ├── users  
 │ │ ├── login.ejs   
 │ │ └── signup.ejs  
-│ ├── searchCountry.ejs  
-│ └── showCategory.ejs  
 ├── app.js  
 ├── cloudConfig.js  
 ├── env.example  
