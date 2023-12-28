@@ -84,9 +84,9 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 │ ├── users  
 │ │ ├── login.ejs   
 │ │ └── signup.ejs  
+├── env.example  
 ├── app.js  
 ├── cloudConfig.js  
-├── env.example  
 ├── LICENSE  
 ├── middleware.js  
 ├── package-lock.json  
