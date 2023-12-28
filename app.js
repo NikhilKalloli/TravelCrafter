@@ -4,7 +4,6 @@ if(process.env.NODE_ENV != "production"){
 // console.log(process.env)
 
 
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -13,6 +12,7 @@ const methodOverride = require("method-override")
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js"); 
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 
 const passport = require("passport");
@@ -23,9 +23,9 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/TravelCrafter"
+const dbUrl = process.env.ATLAS_DB_URL;
 
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname,"views"));
@@ -43,13 +43,26 @@ main().then(()=>{
 
 
 async function main(){
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(dbUrl);
 }
 
-// Cookie is used to store some data on browser so that other pages can access it
+// This is to store the session information on Atlas DB. Previsously it was on localhost
+const store = MongoStore.create({
+    mongoUrl:dbUrl,
+    crypto:{
+        secret: process.env.SESSION_SECRET,
+    },
+    touchAfter: 24 * 3600 , // This means that the session will be updated in the database only if it has been modified in the last 24 hours.
+});
 
+store.on("error",()=>{
+    console.log("ERROR IN MONGO SESSION STORE", err);
+})
+
+// Cookie is used to store some data on browser so that other pages can access it
 const sessionOptions = {
-    secret:"mysecret", // This is used to access the cookie
+    store,
+    secret: process.env.SESSION_SECRET, // This is used to access the cookie
     resave: false,
     saveUninitialized: true,
     cookie:{
@@ -59,10 +72,6 @@ const sessionOptions = {
     }
 };
 
-
-// app.get("/", (req,res)=>{
-//     res.send("Home page");
-// })
 
 // http is a stateless protocol, so we use session to store data on server side
 // Session is used to store temporary data on server side so that it can be accessed by other pages
@@ -82,7 +91,6 @@ passport.deserializeUser(User.deserializeUser());
 
 
 
-
 // Middleware for flash messages
 app.use((req, res, next)=>{
     res.locals.success = req.flash("success");
@@ -91,15 +99,6 @@ app.use((req, res, next)=>{
     next();
 })
 
-// app.get("/demouser", async(req,res)=>{
-//     let fakeUser = new User({
-//         email:"student@gmail.com",
-//         username:"Harry",
-//     })
-
-//     let registeredUser = await User.register(fakeUser,"Helloworld");
-//     res.send(registeredUser);
-// })
 
 app.get("/",(req,res)=>{
     res.redirect("/listings");
@@ -115,7 +114,6 @@ app.all("*",(req,res,next)=>{
 
 app.use((err,req,res,next)=>{
     let {statusCode=500, message="Something went wrong"} = err;
-    // res.status(statusCode).send(message);
     res.status(statusCode).render("errors/error.ejs",{message});
 })
 

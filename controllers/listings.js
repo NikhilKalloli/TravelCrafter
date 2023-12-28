@@ -38,13 +38,7 @@ module.exports.showCategory = (async (req,res)=>{
 
 
     const selectedCategory = req.body.selectedCategory;
-    // console.log('Selected Category:', selectedCategory);
-    
-    // if(selectedCategory=="Trending"){
-    //     const allListings = await Listing.find({});
-    //     req.flash("success","Trending Listings!");
-    //     res.render("listings/index.ejs",{ allListings });
-    // }
+    // console.log(selectedCategory);
 
     const allListings = await Listing.find({category:selectedCategory})
     // console.log(allListings);
@@ -116,7 +110,7 @@ module.exports.renderEditForm = (async (req,res)=>{
         res.redirect("/listings");
     }
     let originalImageUrl = listing.image.url; // We are croping image using cloudinary api
-    originalImageUrl = originalImageUrl.replace("/upload","/upload/h_250,w_250");
+    originalImageUrl = originalImageUrl.replace("/upload","/upload/w_250");
     // console.log(originalImageUrl);
     res.render("listings/edit.ejs",{listing, originalImageUrl});
 

@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const wrapAsync = require("../utils/wrapAsync.js");
-const Listing = require("../models/listing.js");
 const {isLoggedIn, isOwner, validateListing} = require("../middleware.js");
-const { Cursor } = require("mongoose");
 
 const multer  = require('multer') // multer is used to upload files
 const {storage} = require("../cloudConfig.js");// Files will be uploaded to storage in cloudinary.
