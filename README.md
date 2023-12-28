@@ -8,7 +8,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 
 1. **User Authentication**
    - Users can sign up and log in to the platform.
-   - Secure authentication process to protect user data.
+   - Sessions are managed with the help of signed cookies.
 
 2. **Listing Creation**
    - Registered users can create listings for properties they want to rent or share.
@@ -37,7 +37,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 
 - **Backend**
   - Node.js with Express.js framework
-  -  MongoDB Atlas for online data storage
+  - MongoDB Atlas for online data storage
   - Passport library for authentication
   - Cloudinary for image storage
 
@@ -113,11 +113,14 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
    ```
    
 4. Set up environment variables:  
-  Create a ```.env``` file based on the provided ```.env.example```  
-  Configure your MongoDB connection string, Mapbox API key, and Cloudinary credentials.  
+  - Create a ```.env``` file based on the provided ```.env.example```  
+  - Configure your MongoDB connection string, Mapbox API key, and Cloudinary credentials.  
 
 5. Start the application:
-   ``` node app.js ```
+    ```
+    node app.js
+    ```
+  
 
    
   
