@@ -102,19 +102,19 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
    git clone https://github.com/NikhilKalloli/TravelCrafter.git
    ```
    
-   2. Navigate to the project directory:
-     ```
-        cd TravelCrafter
-     ```
+2. Navigate to the project directory:    
+   ```
+   cd TravelCrafter
+   ```
 
 3. Install dependencies:
    ```
    npm install
    ```
    
-4. Set up environment variables:
-  Create a ```.env``` file based on the provided ```.env.example```
-  Configure your MongoDB connection string, Mapbox API key, and Cloudinary credentials.
+4. Set up environment variables:  
+  Create a ```.env``` file based on the provided ```.env.example```  
+  Configure your MongoDB connection string, Mapbox API key, and Cloudinary credentials.  
 
 5. Start the application:
    ``` node app.js ```
@@ -127,11 +127,11 @@ Contributions are welcome! If you have any improvements or new features to sugge
 
 Enjoy playing the with the code! If you have any questions or issues, feel free to [open an issue](https://github.com/NikhilKalloli/TravelCrafter/issues).
 
-## License
+## License 📑
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code for your own projects.
 
-## Acknowledgments
+## Acknowledgments 🙌
 
 Special thanks to [Mapbox](https://www.mapbox.com/), [MongoDB Atlas](https://www.mongodb.com/atlas/database), [Cloudinary](https://cloudinary.com/), [Passport library](https://www.passportjs.org/), and the open-source community for providing valuable tools and resources that made this project possible.
 
