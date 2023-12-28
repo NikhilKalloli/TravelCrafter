@@ -1,10 +1,10 @@
-# TravelCrafter
+# TravelCrafter 🌐
 
 ## Overview
 
-Welcome to our Property Booking Platform! This project offers fundamental features allowing users to register, create property listings, and rate others' listings. 
+Welcome to TravelCrafter! This project offers fundamental features allowing users to register, create property listings, and rate other's listings. 
 The application employs Mapbox to showcase precise locations, MongoDB for efficient data storage, and Cloudinary as the designated cloud service for storing images.
-## Features
+## Features 🚀
 
 1. **User Authentication**
    - Users can sign up and log in to the platform.
@@ -29,7 +29,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 6. **MVC Framework**
    - The project follows the Model-View-Controller (MVC) architectural pattern for organized and scalable development.
 
-## Technologies Used
+## Technologies Used 🛠️
 
 - **Frontend**
   - HTML, CSS, JavaScript
@@ -95,17 +95,17 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 ├── schema.js   
 └── test.js  
 
-## Installation
+## Installation 🛠️
 
 1. Clone the repository:
    ```
    git clone https://github.com/NikhilKalloli/TravelCrafter.git
    ```
    
-2. Navigate to the project directory:
-  ```
-     cd TravelCrafter
-  ```
+   2. Navigate to the project directory:
+     ```
+        cd TravelCrafter
+     ```
 
 3. Install dependencies:
    ```
@@ -125,9 +125,15 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 
 Contributions are welcome! If you have any improvements or new features to suggest, please create a pull request.
 
-
-
 Enjoy playing the with the code! If you have any questions or issues, feel free to [open an issue](https://github.com/NikhilKalloli/TravelCrafter/issues).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code for your own projects.
+
+## Acknowledgments
+
+Special thanks to [Mapbox](https://www.mapbox.com/), [MongoDB Atlas](https://www.mongodb.com/atlas/database), [Cloudinary](https://cloudinary.com/), [Passport library](https://www.passportjs.org/), and the open-source community for providing valuable tools and resources that made this project possible.
 
 
 # 🔗 Connect with Me
