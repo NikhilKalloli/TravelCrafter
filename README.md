@@ -41,6 +41,59 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
   - Passport library for authentication
   - Cloudinary for image storage
 
+## 📂 File Structure
+├── .vscode
+├── controllers
+│ ├── listings.js
+│ ├── reviews.js
+│ └── users.js
+├── init
+│ ├── data.js
+│ └── index.js
+├── models
+│ ├── listing.js
+│ ├── review.js
+│ └── user.js
+├── public
+│ ├── assets
+│ │ ├── css
+│ │ └── js
+├── routes
+│ ├── listing.js
+│ ├── review.js
+│ └── user.js
+└── utils
+├── ExpressError.js
+└── wrapAsync.js
+├── views
+│ ├── errors
+│ │ └── error.ejs
+│ ├── includes
+│ │ ├── flash.ejs
+│ │ ├── footer.ejs
+│ │ └── navbar.ejs
+│ ├── layouts
+│ │ └── boilerplate.ejs
+│ ├── listings
+│ │ ├── edit.ejs
+│ │ ├── index.ejs
+│ │ ├── new.ejs
+│ │ ├── searchCountry.ejs
+│ │ └── show.ejs
+│ ├── users
+│ │ ├── login.ejs
+│ │ └── signup.ejs
+│ ├── searchCountry.ejs
+│ └── showCategory.ejs
+├── app.js
+├── cloudConfig.js
+├── env.example
+├── LICENSE
+├── middleware.js
+├── package-lock.json
+├── package.json
+├── schema.js
+└── test.js
 
 ## Installation
 
@@ -51,7 +104,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
    
 2. Navigate to the project directory:
   ```
-  cd TravelCrafter
+     cd TravelCrafter
   ```
 
 3. Install dependencies:
@@ -65,6 +118,8 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 
 5. Start the application:
    ``` node app.js ```
+
+   
   
  ## Contributing
 
