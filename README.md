@@ -58,42 +58,42 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 │ ├── assets  
 │ ├──  css    
 │ ├── js    
-├── routes
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-└── utils
-├── ExpressError.js
-└── wrapAsync.js
-├── views
-│ ├── errors
-│ │ └── error.ejs
-│ ├── includes
-│ │ ├── flash.ejs
-│ │ ├── footer.ejs
-│ │ └── navbar.ejs
-│ ├── layouts
-│ │ └── boilerplate.ejs
-│ ├── listings
-│ │ ├── edit.ejs
-│ │ ├── index.ejs
-│ │ ├── new.ejs
-│ │ ├── searchCountry.ejs
-│ │ └── show.ejs
-│ ├── users
-│ │ ├── login.ejs
-│ │ └── signup.ejs
-│ ├── searchCountry.ejs
-│ └── showCategory.ejs
-├── app.js
-├── cloudConfig.js
-├── env.example
-├── LICENSE
-├── middleware.js
-├── package-lock.json
-├── package.json
-├── schema.js
-└── test.js
+├── routes  
+│ ├── listing.js  
+│ ├── review.js  
+│ └── user.js  
+└── utils  
+├── ExpressError.js  
+└── wrapAsync.js  
+├── views    
+│ ├── errors  
+│ │ └── error.ejs  
+│ ├── includes  
+│ │ ├── flash.ejs  
+│ │ ├── footer.ejs  
+│ │ └── navbar.ejs  
+│ ├── layouts  
+│ │ └── boilerplate.ejs  
+│ ├── listings  
+│ │ ├── edit.ejs  
+│ │ ├── index.ejs  
+│ │ ├── new.ejs  
+│ │ ├── searchCountry.ejs  
+│ │ └── show.ejs  
+│ ├── users  
+│ │ ├── login.ejs   
+│ │ └── signup.ejs  
+│ ├── searchCountry.ejs  
+│ └── showCategory.ejs  
+├── app.js  
+├── cloudConfig.js  
+├── env.example  
+├── LICENSE  
+├── middleware.js  
+├── package-lock.json  
+├── package.json  
+├── schema.js   
+└── test.js  
 
 ## Installation
 
