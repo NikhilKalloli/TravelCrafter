@@ -42,22 +42,22 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
   - Cloudinary for image storage
 
 ## 📂 File Structure
-├── .vscode
-├── controllers
-│ ├── listings.js
-│ ├── reviews.js
-│ └── users.js
-├── init
-│ ├── data.js
-│ └── index.js
-├── models
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-├── public
-│ ├── assets
-│ │ ├── css
-│ │ └── js
+├── .vscode  
+├── controllers  
+│ ├── listings.js  
+│ ├── reviews.js  
+│ └── users.js  
+├── init  
+│ ├── data.js  
+│ └── index.js  
+├── models  
+│ ├── listing.js  
+│ ├── review.js  
+│ └── user.js  
+├── public  
+│ ├── assets  
+│ ├──  css    
+│ ├── js    
 ├── routes
 │ ├── listing.js
 │ ├── review.js
