@@ -80,7 +80,7 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
 │ │ ├── new.ejs  
 │ │ ├── searchCountry.ejs  
 │ │ ├── show.ejs  
-│ │ └── showCategory.ejs
+│ │ └── showCategory.ejs  
 │ ├── users  
 │ │ ├── login.ejs   
 │ │ └── signup.ejs  
