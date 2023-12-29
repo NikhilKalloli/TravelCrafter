@@ -65,8 +65,10 @@ module.exports.showSearch = (async (req,res)=>{
     if(allListings.length==0){
         req.flash("error","No listings found for the specified country.");
         res.redirect("/listings");
+    }else{
+        let country = allListings[0].country;
+        res.render("listings/searchCountry.ejs",{ allListings, country })
     }
-    res.render("listings/searchCountry.ejs",{ allListings, searchedCountry })
 }); 
 
 
