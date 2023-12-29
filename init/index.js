@@ -10,7 +10,7 @@ const upload = multer({ storage }) ; // now multer uploads our files in cloudina
 
 const cloudinary = require('cloudinary').v2;
 
-const dbUrl = "mongodb+srv://nikhilkalloli0097:ZJipnMJNhOZUvIbR@cluster0.y2zqf4x.mongodb.net/?retryWrites=true&w=majority";
+const dbUrl = process.env.ATLAS_DB_URL;
 
 main()
   .then(() => {
@@ -31,9 +31,10 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 
+
 const initDB = async () => {
   await Listing.deleteMany({});
-  initData.data = initData.data.map((obj)=>({...obj, owner:"658d7e84dfe6a523afcf26ec"}));
+  initData.data = initData.data.map((obj)=>({...obj, owner: process.env.DB_ADMIN_ID}));
   let listings = await Listing.insertMany(initData.data);
   console.log("data was initialized");
 };
@@ -50,11 +51,11 @@ initDB();
 /*
 const initDB = async () => {
   try {
-    // Uncomment the line below if you want to clear existing listings before inserting new ones
+    //To clear existing listings before inserting new ones
     await Listing.deleteMany({});
 
     // Map over the initData data and add the owner field
-    initData.data = initData.data.map((obj) => ({ ...obj, owner: "658d7e84dfe6a523afcf26ec" }));
+    initData.data = initData.data.map((obj) => ({ ...obj, owner: "658e87bc96c53ffeef0437ca" }));
 
     // Iterate through the initData data and upload images to Cloudinary
     const listingsWithCloudinaryImages = await Promise.all(
@@ -83,7 +84,7 @@ const initDB = async () => {
               url: cloudinaryImage.url,
               filename: cloudinaryImage.original_filename,
             },
-            owner: "658d7e84dfe6a523afcf26ec",
+            owner: process.env.DB_ADMIN_ID,
           };
 
           return listingWithImage;
@@ -105,4 +106,5 @@ const initDB = async () => {
 
 
 initDB();
+
 */
