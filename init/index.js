@@ -55,7 +55,7 @@ const initDB = async () => {
     await Listing.deleteMany({});
 
     // Map over the initData data and add the owner field
-    initData.data = initData.data.map((obj) => ({ ...obj, owner: "658e87bc96c53ffeef0437ca" }));
+    initData.data = initData.data.map((obj) => ({ ...obj, owner:  process.env.DB_ADMIN_ID }));
 
     // Iterate through the initData data and upload images to Cloudinary
     const listingsWithCloudinaryImages = await Promise.all(
