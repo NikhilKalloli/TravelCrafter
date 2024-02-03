@@ -138,7 +138,7 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 Special thanks to [Mapbox](https://www.mapbox.com/), [MongoDB Atlas](https://www.mongodb.com/atlas/database), [Cloudinary](https://cloudinary.com/), [Passport library](https://www.passportjs.org/), and the open-source community for providing valuable tools and resources that made this project possible.
 
 
-# 🔗 Connect with Me
+#  Connect with Me
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/NikhilKalloli)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikhil-kalloli-a6ab2a25b/)
