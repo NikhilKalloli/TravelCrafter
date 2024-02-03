@@ -165,3 +165,52 @@ body {
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 767px) {
+
+    .navbar {
+        height: auto;
+    }
+    
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav a {
+        margin: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .fa-compass {
+        font-size: 1.5rem;
+    }
+
+    .f-info {
+        height: auto;
+    }
+
+    .card-img-top {
+        border-radius: 0 !important;
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    .filter {
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+
+
+}

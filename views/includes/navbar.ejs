@@ -1,27 +1,52 @@
 <style>
-    .search-btn{
+    .search-btn {
         background-color: #fe424d;
         color: #fff;
         border-radius: 25px;
-        padding: 0 1rem 0 1rem;
+        padding: 0.5rem 1rem;
     }
 
-    .search-btn:hover{
+    .search-btn:hover {
         background-color: #fe424d;
         color: #fff;
     }
 
-    .search-btn i{
+    .search-btn i {
         display: inline;
         margin-right: 0.5rem;
     }
-    
-    .search-input{
+
+    .search-input {
         border-radius: 25px;
-        padding: 0.5rem 3rem 0.5rem 3rem;
+        padding: 0.5rem;
         font-size: 1rem;
     }
 
+    @media screen and (max-width: 767px) {
+        /* Adjust styles for smaller screens here */
+        .navbar-collapse {
+            text-align: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .navbar-toggler {
+            margin: 1rem 0;
+        }
+
+        .navbar-nav.ms-auto {
+            margin-top: 1rem;
+        }
+    }
 </style>
 
 
