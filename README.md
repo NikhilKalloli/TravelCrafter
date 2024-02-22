@@ -40,6 +40,20 @@ The application employs Mapbox to showcase precise locations, MongoDB for effici
   - MongoDB Atlas for online data storage
   - Passport library for authentication
   - Cloudinary for image storage
+ 
+## Screenshots 📷
+
+**Overview:**  
+  
+![First View](https://github.com/NikhilKalloli/TravelCrafter/blob/main/assets/first.png)
+
+**Details:**  
+   
+![Extended view](https://github.com/NikhilKalloli/TravelCrafter/blob/main/assets/second.png)
+
+**Login to Add your Listing:**  
+  
+![Extended view](https://github.com/NikhilKalloli/TravelCrafter/blob/main/assets/third.png)
 
 ## 📂 File Structure
 ├── .vscode  
